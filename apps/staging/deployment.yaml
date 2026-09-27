@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitops-canary-app
+  namespace: staging
+  labels:
+    app: gitops-canary-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gitops-canary-app
+  template:
+    metadata:
+      labels:
+        app: gitops-canary-app
+    spec:
+      containers:
+        - name: app
+          image: gitops-canary-app:v1
+          ports:
+            - containerPort: 8000
+          env:
+            - name: APP_VERSION
+              value: "v1"
+            - name: FAIL_RATE
+              value: "0"
