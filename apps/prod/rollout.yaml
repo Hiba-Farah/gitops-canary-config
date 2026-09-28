@@ -4,7 +4,7 @@ metadata:
   name: gitops-canary-app
   namespace: prod
 spec:
-  replicas: 4
+  replicas: 3
   strategy:
     canary:
       canaryService: gitops-canary-app-canary
