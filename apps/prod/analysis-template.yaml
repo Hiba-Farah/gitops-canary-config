@@ -5,7 +5,7 @@ metadata:
   namespace: prod
 spec:
   args:
-    - name: canary-hash
+    - name: canaryHash
   metrics:
     - name: success-rate
       interval: 15s
@@ -16,6 +16,6 @@ spec:
         prometheus:
           address: http://prometheus.monitoring.svc.cluster.local:9090
           query: |
-            sum(rate(http_requests_total{status="200", pod_hash="{{args.canary-hash}}"}[1m]))
+            sum(rate(http_requests_total{status="200", pod_hash="{{args.canaryHash}}"}[1m]))
             /
-            sum(rate(http_requests_total{pod_hash="{{args.canary-hash}}"}[1m]))
+            sum(rate(http_requests_total{pod_hash="{{args.canaryHash}}"}[1m]))

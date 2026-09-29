@@ -20,7 +20,7 @@ spec:
             templates:
               - templateName: success-rate
             args:
-              - name: canary-hash
+              - name: canaryHash
                 valueFrom:
                   podTemplateHashValue: Latest
         - setWeight: 25
@@ -30,7 +30,7 @@ spec:
             templates:
               - templateName: success-rate
             args:
-              - name: canary-hash
+              - name: canaryHash
                 valueFrom:
                   podTemplateHashValue: Latest
         - setWeight: 50
