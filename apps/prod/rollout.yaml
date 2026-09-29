@@ -47,11 +47,11 @@ spec:
     spec:
       containers:
         - name: app
-          image: gitops-canary-app:v3
+          image: gitops-canary-app:v2
           ports:
             - containerPort: 8000
           env:
             - name: APP_VERSION
-              value: "v3"
+              value: "v2"
             - name: FAIL_RATE
-              value: "0.5"
+              value: "0"
