@@ -47,7 +47,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: ghcr.io/hiba-farah/gitops-canary-app:829b06e
+          image: gitops-canary-app:v1
           ports:
             - containerPort: 8000
           readinessProbe:
@@ -65,6 +65,6 @@ spec:
             periodSeconds: 10
           env:
             - name: APP_VERSION
-              value: "v2"
+              value: "v1"
             - name: FAIL_RATE
               value: "0"
