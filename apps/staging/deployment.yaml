@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: ghcr.io/hiba-farah/gitops-canary-app:0532389
+          image: ghcr.io/hiba-farah/gitops-canary-app:f46854e
           ports:
             - containerPort: 8000
           env:
